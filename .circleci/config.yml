@@ -21,8 +21,12 @@ jobs:
             gcloud container clusters get-credentials ${GOOGLE_CLUSTER_NAME} --zone ${GOOGLE_COMPUTE_ZONE} --project ${GOOGLE_PROJECT_ID}
             gcloud auth configure-docker
 
-      - run :
+      - run:
           name: Build and push docker images
           command: |
             docker build -t asia.gcr.io/${GOOGLE_PROJECT_ID}/${PROJECT_NAME}:$CIRCLE_BUILD_NUM .
             docker push asia.gcr.io/${GOOGLE_PROJECT_ID}/${PROJECT_NAME}:$CIRCLE_BUILD_NUM
+      - run:
+          name: Set image to Kubernetes
+          command: |
+            kubectl set image deployment/test-ci test-ci=asia.gcr.io/${GOOGLE_PROJECT_ID}/${PROJECT_NAME}:$CIRCLE_BUILD_NUM
