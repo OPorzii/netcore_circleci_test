@@ -24,5 +24,5 @@ jobs:
       - run :
           name: Build and push docker images
           command: |
-            docker build -t asia.gcr.io/${PROJECT_NAME}/bill:$CIRCLE_BUILD_NUM .
-            docker push asia.gcr.io/${PROJECT_NAME}/bill:$CIRCLE_BUILD_NUM
+            docker build -t asia.gcr.io/${GOOGLE_PROJECT_ID}/${PROJECT_NAME}/bill:$CIRCLE_BUILD_NUM .
+            docker push asia.gcr.io/${GOOGLE_PROJECT_ID}/${PROJECT_NAME}/bill:$CIRCLE_BUILD_NUM
