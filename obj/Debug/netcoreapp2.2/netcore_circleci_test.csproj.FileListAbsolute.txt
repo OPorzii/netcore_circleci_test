@@ -1,0 +1,14 @@
+C:\Users\OPorzii\Desktop\test_ci\netcore_circleci_test\bin\Debug\netcoreapp2.2\netcore_circleci_test.deps.json
+C:\Users\OPorzii\Desktop\test_ci\netcore_circleci_test\bin\Debug\netcoreapp2.2\netcore_circleci_test.runtimeconfig.json
+C:\Users\OPorzii\Desktop\test_ci\netcore_circleci_test\bin\Debug\netcoreapp2.2\netcore_circleci_test.runtimeconfig.dev.json
+C:\Users\OPorzii\Desktop\test_ci\netcore_circleci_test\bin\Debug\netcoreapp2.2\netcore_circleci_test.dll
+C:\Users\OPorzii\Desktop\test_ci\netcore_circleci_test\bin\Debug\netcoreapp2.2\netcore_circleci_test.pdb
+C:\Users\OPorzii\Desktop\test_ci\netcore_circleci_test\obj\Debug\netcoreapp2.2\netcore_circleci_test.csprojAssemblyReference.cache
+C:\Users\OPorzii\Desktop\test_ci\netcore_circleci_test\obj\Debug\netcoreapp2.2\netcore_circleci_test.csproj.CoreCompileInputs.cache
+C:\Users\OPorzii\Desktop\test_ci\netcore_circleci_test\obj\Debug\netcoreapp2.2\netcore_circleci_test.RazorAssemblyInfo.cache
+C:\Users\OPorzii\Desktop\test_ci\netcore_circleci_test\obj\Debug\netcoreapp2.2\netcore_circleci_test.RazorAssemblyInfo.cs
+C:\Users\OPorzii\Desktop\test_ci\netcore_circleci_test\obj\Debug\netcoreapp2.2\netcore_circleci_test.AssemblyInfoInputs.cache
+C:\Users\OPorzii\Desktop\test_ci\netcore_circleci_test\obj\Debug\netcoreapp2.2\netcore_circleci_test.AssemblyInfo.cs
+C:\Users\OPorzii\Desktop\test_ci\netcore_circleci_test\obj\Debug\netcoreapp2.2\netcore_circleci_test.RazorTargetAssemblyInfo.cache
+C:\Users\OPorzii\Desktop\test_ci\netcore_circleci_test\obj\Debug\netcoreapp2.2\netcore_circleci_test.dll
+C:\Users\OPorzii\Desktop\test_ci\netcore_circleci_test\obj\Debug\netcoreapp2.2\netcore_circleci_test.pdb
