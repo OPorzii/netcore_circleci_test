@@ -29,4 +29,4 @@ jobs:
       - run:
           name: Set image to Kubernetes
           command: |
-            kubectl set image deployment/test-ci test-ci=asia.gcr.io/${GOOGLE_PROJECT_ID}/${PROJECT_NAME}:$CIRCLE_BUILD_NUM
+            kubectl set image deployment/test-ci test-circleci=asia.gcr.io/${GOOGLE_PROJECT_ID}/${PROJECT_NAME}:$CIRCLE_BUILD_NUM
