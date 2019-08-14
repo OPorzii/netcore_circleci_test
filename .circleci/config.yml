@@ -17,7 +17,7 @@ jobs:
           name: Auth to gcloud
           command: |
             echo $GOOGLE_AUTH | gcloud auth activate-service-account --key-file=-
-            gcloud --quiet config set project ${PROJECT_ID}
+            gcloud --quiet config set project ${GOOGLE_PROJECT_ID}
             gcloud container clusters get-credentials ${GOOGLE_CLUSTER_NAME} --zone ${GOOGLE_COMPUTE_ZONE} --project ${GOOGLE_PROJECT_ID}
             gcloud auth configure-docker
 
