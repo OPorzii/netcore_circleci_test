@@ -2,15 +2,27 @@ version: 2
 jobs:
   build:
     docker:
-      - image: debian:stretch
-
+      - image: google/cloud-sdk
+    environment:
+      - PROJECT_NAME: "test_circleci"
+      - GOOGLE_PROJECT_ID: "carpool-app-249317"
+      - GOOGLE_COMPUTE_ZONE: "asia-southeast1-a"
+      - GOOGLE_CLUSTER_NAME: "standard-cluster-1"
     steps:
       - checkout
+      - setup_remote_docker:
+          docker_layer_caching: true
 
       - run:
-          name: Greeting
-          command: echo Hello, world.
+          name: Auth to gcloud
+          command: |
+            echo $GOOGLE_AUTH | gcloud auth activate-service-account --key-file=-
+            gcloud --quiet config set project ${PROJECT_ID}
+            gcloud container clusters get-credentials ${GOOGLE_CLUSTER_NAME} --zone ${GOOGLE_COMPUTE_ZONE} --project ${GOOGLE_PROJECT_ID}
+            gcloud auth configure-docker
 
-      - run:
-          name: Print the Current Time
-          command: date
+      - run :
+          name: Build and push docker images
+          command: |
+            docker build -t asia.gcr.io/${PROJECT_NAME}/bill:$CIRCLE_BUILD_NUM .
+            docker push asia.gcr.io/${PROJECT_NAME}/bill:$CIRCLE_BUILD_NUM
