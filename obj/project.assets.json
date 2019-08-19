@@ -12077,23 +12077,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\OPorzii\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "/home/oporzii/.nuget/packages/": {},
+    "/usr/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\OPorzii\\Desktop\\test_ci\\netcore_circleci_test\\netcore_circleci_test.csproj",
+      "projectUniqueName": "/home/oporzii/Desktop/test/netcore_circleci_test/netcore_circleci_test.csproj",
       "projectName": "netcore_circleci_test",
-      "projectPath": "C:\\Users\\OPorzii\\Desktop\\test_ci\\netcore_circleci_test\\netcore_circleci_test.csproj",
-      "packagesPath": "C:\\Users\\OPorzii\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\OPorzii\\Desktop\\test_ci\\netcore_circleci_test\\obj\\",
+      "projectPath": "/home/oporzii/Desktop/test/netcore_circleci_test/netcore_circleci_test.csproj",
+      "packagesPath": "/home/oporzii/.nuget/packages/",
+      "outputPath": "/home/oporzii/Desktop/test/netcore_circleci_test/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "/usr/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\OPorzii\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/home/oporzii/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.2"

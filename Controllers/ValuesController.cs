@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
@@ -18,28 +19,27 @@ namespace netcore_circleci_test.Controllers
         }
 
         // GET api/values/5
-        [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
+        
+        [HttpGet("from2client")]
+        public async Task<string>  GetFromClientTwo()
         {
-            return "value";
+            using (var client = new HttpClient())
+            {
+                var url = new Uri($"http://34.87.40.137:8000/api/values");
+                var response = await client.GetAsync(url);
+                string resStr;
+                using (var content = response.Content)
+                {
+                    resStr = await content.ReadAsStringAsync();
+                }
+
+                string result = "Hello Message From WebAPI 1\n\n" + resStr;
+                
+                return result;
+            }
+
         }
 
-        // POST api/values
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
 
-        // PUT api/values/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
     }
 }
